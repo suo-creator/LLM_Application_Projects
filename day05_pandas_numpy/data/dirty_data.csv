@@ -1,0 +1,9 @@
+
+doc_id,category,question,answer
+doc001,RAG,什么是RAG？    ,RAG全称检索增强生成，缓解大模型幻觉
+doc002,向量库,Chroma和FAISS区别？,
+doc003,RAG,"",RAG需要先对文档文本切分，再向量化
+doc004,Ollama,Ollama怎么限制显存？,启动模型设置num_gpu参数！！##
+doc005,向量库,向量相似度原理？,
+doc006,RAG,RAG有哪些缺点？    ,知识库更新时需要重新向量化文档
+doc007,,Langchain作用是什么,用于快速搭建大模型应用链路
