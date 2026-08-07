@@ -17,10 +17,13 @@ class FaissVectorStore:
         # 加载本地已有数据
         self._load()
 
-    def add_text(self, text: str, embedding):
+    def add_text(self, text: str, embedding, metadata: dict = None):
         arr = np.array([embedding], dtype=np.float32)
         self.index.add(arr)
-        self.documents.append({"text": text})
+        self.documents.append({
+            "text": text,
+            "metadata": metadata if metadata else {}
+        })
 
     def search(self, query_emb, top_k: int = 3):
         # 关键：查询向量也要转 np.float32 的二维数组
